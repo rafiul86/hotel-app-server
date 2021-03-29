@@ -11,7 +11,7 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
-const serviceAccount = require("./config/e-commerce-94a37-firebase-adminsdk-wp8r4-ca13c62603.json");
+const serviceAccount = require(DB_CONFIG);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
