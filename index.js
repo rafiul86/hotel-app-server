@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = 5000
 const cors = require("cors");
 const admin = require("firebase-admin");
 require("dotenv").config();
@@ -56,4 +57,4 @@ client.connect((err) => {
   console.log("Database connected");
 });
 
-app.listen(5000);
+app.listen(process.env.PORT || port);
