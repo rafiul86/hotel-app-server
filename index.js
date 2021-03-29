@@ -11,7 +11,7 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
-const serviceAccount = require(`./config/${process.env.DB_CONFIG}`);
+const serviceAccount = require(process.env.DB_CONFIG);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
